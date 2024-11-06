@@ -1,10 +1,8 @@
 require 'active_record'
 
-DATABASE_NAME = 'rails_ai_test'
-
 ActiveRecord::Base.establish_connection(
   adapter: 'postgresql',
-  database: DATABASE_NAME
+  database: ENV.fetch('DATABASE_NAME', 'rails_ai_test')
 )
 ActiveRecord::Schema.verbose = false
 ActiveRecord::Schema.define do

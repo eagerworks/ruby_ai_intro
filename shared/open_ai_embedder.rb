@@ -1,4 +1,4 @@
-module Embedder
+module OpenAiEmbedder
   EMBEDDING_MODEL = 'text-embedding-3-small'
 
   def self.embed(content)

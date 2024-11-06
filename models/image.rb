@@ -1,7 +1,7 @@
 require 'active_record'
-require_relative './embedder'
+require_relative '../shared/jina_ai_embedder'
 
-class Document < ActiveRecord::Base
+class Image < ActiveRecord::Base
   has_neighbors :embedding
 
   after_create :generate_embedding
@@ -9,7 +9,7 @@ class Document < ActiveRecord::Base
   private
 
   def generate_embedding
-    embedding = ::Embedder.embed(self.content)
+    embedding = ::JinaAiEmbedder.embed(self.base64_image)
     update(embedding: embedding)
   end
 end
