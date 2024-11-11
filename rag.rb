@@ -25,7 +25,7 @@ response = OpenAI::Client.new.chat(
   parameters: {
     model: 'gpt-4o-mini',
     messages: [
-      { role: 'system', content: 'You are a helpful assistant. You are given a query and some relevant context. You need to answer the user query based on the provided context. ONLY USE THAT INFORMATION TO ANSWER THE QUERY. DO NOT MAKE UP ANY INFOMRATION. FORGET WHAT YOU KNOW ABOUT THE WORLD OUTSIDE THE QUERY AND THE CONTEXT.' },
+      { role: 'system', content: 'You are a helpful assistant. You are given a query and some relevant context. You need to answer the user query based on the provided context. ONLY USE THAT INFORMATION TO ANSWER THE QUERY. DO NOT MAKE UP ANY INFORMATION. FORGET WHAT YOU KNOW ABOUT THE WORLD OUTSIDE THE QUERY AND THE CONTEXT.' },
       { role: 'user', content: "Query: #{query}\n Context: #{query_context}" }
     ],
     temperature: 0.1,
