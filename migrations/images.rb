@@ -9,7 +9,7 @@ ActiveRecord::Schema.define do
   enable_extension 'vector'
 
   create_table :images, if_not_exists: true do |t|
-    t.text :description
+    t.text :name
     t.text :base64_image
     t.vector :embedding, limit: 768
   end
