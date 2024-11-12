@@ -11,12 +11,6 @@ createdb rails_ai_test
 ```
 If you are using another database, set the `DATABASE_NAME` environment variable.
 
-Enable pgvector extension and generate migration for vector indices:
-```sh
-rails generate neighbor:vector
-rails db:migrate
-```
-
 Export OpenAI API key as `OPENAI_API_KEY`.
 ```sh
 export OPENAI_API_KEY=<your-openai-api-key>
