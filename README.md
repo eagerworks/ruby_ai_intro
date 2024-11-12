@@ -1,4 +1,6 @@
-# Rails + AI example
+# Ruby + AI example
+
+Example repo for using AI with Ruby. Uses [pgvector](https://github.com/pgvector/pgvector) for PostgreSQL vector storage and the [neighbor](https://github.com/ankane/neighbor) gem for vector similarity search.
 
 ## Setup
 Install [pgvector](https://github.com/pgvector/pgvector) for PostgreSQL vector similarity search.
@@ -33,7 +35,6 @@ bundle install
 
 ### Text
 ```sh
-# Semantic search
 ruby semantic_search.rb
 ruby document_similarity.rb
 ruby rag.rb

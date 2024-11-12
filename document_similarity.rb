@@ -1,6 +1,4 @@
 require 'neighbor'
-require 'openai'
-OpenAI.configure { |config| config.access_token = ENV.fetch('OPENAI_API_KEY') }
 require_relative 'migrations/documents'
 require_relative 'models/document'
 require_relative 'shared/document_seeds'
